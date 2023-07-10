@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel = "stylesheet" href ="css/destino.css">
+    <link rel = "stylesheet" href ="css/estilos-tarjeta.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="shortcut icon" href="images/oryza-logo.png" />           
+    <meta name="viewport" content="width=, initial-scale=1.0 shrink-to-fit=no">
+    <title>Oryza Tienda sin Tacc</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Square+Peg&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Playball&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="container-fluid" id="header">
+        <nav class="navbar navbar-expand navbar-dark" id="navbar">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html" >
+                <img src="images/oryza-logo.png" width="30" height="30" alt="logo Oryza">
+                Oryza Tienda sin TACC
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#datosDeEnvio">Datos de envío</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#metodosDeEnvio">Métodos de envio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#metodosDePago">Métodos de pago</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+          <!-- Menú hamburguesa Smartphone---------->
+          <nav class="navbar navbar-expand navbar-dark" id="menuHamburguesa">
+            <div class="container-fluid">
+                <a href="index.html">
+                  <img src="images/oryza-logo-chico.png" width="40" height="40" alt="logo Oryza">
+                </a>
+                <p >Oryza Tienda sin TACC</p>
+                <div class="dropdown show">
+                  <a class="btn btn-outline-info dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="images/menu.png" id="logoHamburguesa" alt="logo Oryza">
+                  </a>
+                
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item descripcion" href="#datosDeEnvio">Datos de envío</a>
+                    <a class="dropdown-item descripcion" href="#metodosDeEnvio">Métodos de envío</a>
+                    <a class="dropdown-item descripcion" href="#metodosDePago">Métodos de pago</a>
+                  </div>
+                </div>
+            </div>
+            </nav>
+            <!-- Fin menu hamburguesa-------->
+  </header>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <form id="formEnvio">
+                <fieldset>
+                    <div class="col-11" id="datosDeEnvio">
+                        <legend class="articulo">Datos de envío:</legend>
+                    
+                        <div class="itemForm col-6-lg col-10-sm">
+                            <label for="Nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control itemFormulario" placeholder="Nombre" id="nombre">
+                        </div>
+                        <div class="itemForm col-6-lg col-10-sm">
+                            <label for="Apellido" class="form-label">Apellido</label>
+                            <input type="text" class="form-control itemFormulario" placeholder="Apellido" id="apellido">
+                        </div>
+                        <div class="itemForm col-6-lg col-10-sm" >
+                            <label for="InputEmail1" class="form-label">Dirección email</label>
+                            <input type="email" class="form-control itemFormulario"  aria-describedby="emailHelp" id="email">
+                            <div id="emailHelp" class="form-text">direccion@ejemplo.com</div>
+                        </div>
+                        <div class="itemForm col-6-lg col-10-sm">
+                            <label for="dni" class="form-label">DNI Argentina</label>
+                            <input type="text" class="form-control itemFormulario" placeholder="11111111" id="dni" maxlength="8">
+                        </div> 
+                        <div class="itemForm col-6-lg col-10-sm">
+                            <label for="direccion" class="form-label">Dirección </label>
+                            <input type="text" class="form-control itemFormulario" placeholder="Calle n°" id="direccion">
+                        </div>
+                        <div class="itemForm col-6-lg col-10-sm">
+                            <label for="piso" class="form-label">Piso / departamento </label>
+                            <input type="text-area" class="form-control itemFormulario" placeholder=" - " id="piso">
+                        </div>
+                        <div class="itemForm col-6-lg col-10-sm">
+                            <label for="localidad" class="form-label">Localidad</label>
+                            <select class="form-select itemFormulario" aria-label="Default select example" id="localidad">
+                                <option selected>Localidad</option>
+                                <option value="1">Castelar</option>
+                                <option value="2">El Palomar</option>
+                                <option value="3">Haedo</option>
+                                <option value="4">Morón</option>
+                                <option value="5">Villa Sarmiento</option>
+                                <option value="6">Otro</option>
+                            </select>
+                            <div id="localidadEnvios" class="form-text">Envío Gratis dentro del partido de Morón</div>
+                        </div>
+                        <div class="itemForm col-6-lg col-10-sm">
+                            <label for="telefono" class="form-label">Teléfono</label>
+                            <input type="number" class="form-control itemFormulario" placeholder="01111111111" id="telefono" maxlength="11">
+                        </div>
+                    </div>
+                    <!-- Elegir método de envío-->
+                    <div class="col-11 metodosPago" id="metodosDeEnvio">
+                      <legend class="articulo">Método de envío:</legend>
+                      <div class="col-10 itemsPago">
+                          <div class="form-check ">
+                              <input class="form-check-input seleccionMetodosEnvio" type="radio" name="inlineRadioOptions" id="retirar" value="Retiro en local">
+                              <label class="form-check-label" for="inlineRadio1">
+                                Retirar gratis en nuestro local de la calle Timbúes.
+                              </label>
+                          </div>
+                          <div class="form-check ">
+                            <input class="form-check-input seleccionMetodosEnvio" type="radio" name="flexRadioDefault" id="envioDomicilio" value="Envío a domicilio" >
+                            <label class="form-check-label" for="flexRadioDefault2">
+                             Envío a domicilio GRATIS dentro del partido de Morón. Otras localidades: costo $450.
+                            </label>
+                          </div>                          
+                      </div>
+                  </div>
+                    <!--Fin de métodos de envío-->
+
+                    <!--Elegir método de pago-->
+                    <div class="col-12 metodosPago" id="metodosDePago">
+                        <legend class="articulo">Método de pago:</legend>
+                        <div class="cardsMetodosPago">
+                          <div class="card text-center itemsPago col-5-md col-10-sm" style="width: 18rem;">
+                            <ul class="list-group list-group-flush">
+                              <li class="list-group-item">
+                                <input class="form-check-input seleccionMetodosPago" type="radio" name="inlineRadioOptions" id="tarjetaCredito" value="Tarjeta">
+                                <label class="form-check-label" for="inlineRadio1">
+                                Tarjeta de débito o crédito
+                              </label>
+                            </li>
+                              <li class="list-group-item divImagen"><img src="images/tarjeta.png" alt="tarjetas" class="imgForm">
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="card text-center itemsPago col-5-md col-10-sm" style="width: 18rem;">
+                            <ul class="list-group list-group-flush">
+                              <li class="list-group-item">
+                                <input class="form-check-inpu seleccionMetodosPago" type="radio" name="flexRadioDefault" id="transferencia" value="Transferencia">
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                 Transferencia (25% off)
+                                </label>
+                            </li>
+                              <li class="list-group-item divImagen"><img src="images/transferencia.png" alt="transferencia" class="imgForm">
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="card text-center itemsPago col-5-md col-10-sm" style="width: 18rem;">
+                            <ul class="list-group list-group-flush">
+                              <li class="list-group-item">
+                                <input class="form-check-input seleccionMetodosPago" type="radio" name="flexRadioDefault" id="pagoFacil" value="Pago Fácil">
+                                <label class="form-check-label" for="flexRadioDefault4">
+                                 Pago Fácil
+                                </label>
+                            </li>
+                              <li class="list-group-item divImagen"><img src="images/pagofacil.png" alt="Pago Fácil" class="imgForm">
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="card text-center itemsPago col-5-md col-10-sm" style="width: 18rem;">
+                            <ul class="list-group list-group-flush">
+                              <li class="list-group-item">
+                                <input class="form-check-input seleccionMetodosPago" type="radio" name="inlineRadioOptions" id="rapipago" value="Rapipago">
+                                  <label class="form-check-label" for="inlineRadio2">
+                                    Rapipago
+                                  </label>
+                            </li>
+                              <li class="list-group-item divImagen"><img src="images/rapipago.png" alt="Pago Fácil" class="imgRapipago">
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        
+                  </div> <!--Fin de metodosPago-->
+
+              <div class="cardsPago">
+                  <!------ Card Rapipago y pago fácil ------------>
+                    <div id="cardCodigoPago">
+                      <div class="card text-center" style="width: 25rem;">
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">
+                            <h2>
+                              <img src="images/oryza-logo-chico.png" alt="logo Oryza">
+                              Código de pago
+                            </h2>
+                              </li>
+                          <li class="list-group-item transf">
+                              <div>18805 55956</div>
+                            </li>
+                            <li class="list-group-item transf">
+                                <p>Muestra este código de pago al cajero en:</p>
+                            </li>
+                            <li class="list-group-item">
+                                  <div class="imagenes">
+                                    <img src="images/rapipago.png" alt="Pago Fácil" class="imgRapipago">
+                                    <img src="images/pagofacil.png" alt="Pago Fácil" class="imgForm">
+                                  </div>
+                            </li>
+                            <li class="list-group-item transf">
+                              <p>Al confirmar la compra se puede realizar el pago hasta 72 hs después. Al recibir el pago se despachará el pedido y recibirás un correo con un código de seguimiento.</p>
+                          </li>
+                        </ul>
+                      </div>
+                  </div>
+                <!-- Fin de card rapipago y pago fácil ------>
+
+
+                                          <!-- card Transferencia -->
+                                          <div id="cardTransferencia">
+                                            <div class="card text-center" style="width: 25rem;">
+                                              <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">
+                                                  <h2>
+                                                    <img src="images/oryza-logo-chico.png" alt="logo Oryza">
+                                                    Cómo transferir:
+                                                  </h2>
+                                                    </li>
+                                                <li class="list-group-item transf">
+                                                  <p>Al confirmar la compra, te enviaremos un correo con los datos para realizar la transferencia.</p>
+                                                  <p>Una vez recibido el pago, se despachará el pedido y recibirás un correo de confirmación que incluye un código de seguimiento.</p>
+                                                </li>
+                                              </ul>
+                                            </div>
+                                          </div>
+                
+                          <!-- Fin card transferencia  ------->
+              </div>
+
+                  
+                        <button type="button" class="btn btn-outline-info"  id="btnCompletarDatosTarjeta" data-toggle="modal" data-target="#modalParaTarjeta" >
+                          Completar datos de tarjeta
+                        </button>
+                    
+                        <!-- Modal tarjeta-->
+                        
+                          <div class="modal fade" id="modalParaTarjeta" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">
+                                    <img src="images/oryza-logo-chico.png" alt="logo Oryza">
+                                    Datos de tarjeta</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                              
+                      <div class="contenedor">
+                        <!-- Tarjeta animada-->
+                        <section class="tarjeta" id="tarjeta">
+                            <div class="delantera">
+                                <div class="logo-marca" id="logo-marca">
+                                    <!--Se completa con JS-->                </div>
+                                <img src="images/tarjeta/chip.png" alt="chip" class="chip">
+                                <div class="datos">
+                                    <div class="grupo" id="numero">
+                                        <p class="label">Número tarjeta</p>
+                                        <p class="numero"><!--Completa con JS--></p>
+                                    </div>
+                                    <div class="flexbox">
+                                        <div class="grupo" id="nombre">
+                                            <p class="label">Nombre tarjeta</p>
+                                            <p ><span class="nombre"><!-- Rellenado con JS--></span> <span class="apellido"><!-- Rellenado con JS--></span></p>
+                                        </div>
+                                        <div class="grupo" >
+                                            <p class="label">Expiracion</p>
+                                            <p class="expiracion" > <span class="mes" id="mesExpiracion">MM</span> / <span class="year" id="yearExpiracion">AA</span> </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="trasera">
+                                <div class="barra-magnetica"></div>
+                                <div class="datos">
+                                    <div class="grupo" id="firmaBarra">
+                                        <p class="label">Firma</p>
+                                        <div class="firma" ><p> <span id="firmaNombre"></span> <span  id="firmaApellido"></span> </p>
+                                        </div>
+                                    </div>
+                                    <div class="grupo" >
+                                        <p class="label">CCV</p>
+                                        <p class="ccv" id="ccv"></p>
+                                    </div>
+                                </div>
+                                <p class="leyenda">Tu Banco</p>
+                                <a href="#" class="link-banco">www.tu-banco-com</a>
+                            </div>
+                        </section>
+                        <!-- Fin de tarjeta animada-->
+                        <!-- Formulario tarjeta-->
+                                  <form  action="" id="formulario-tarjeta" class="formulario-tarjeta">
+                                    <div class="itemForm">
+                                      <input type="text"  class="form-control" id="numeroTarjeta" maxlength="19" autocomplete="off" placeholder="1111 1111 1111 1111">
+                                      <div id="" class="form-text">Número tarjeta</div>                                    
+                                    </div> 
+                                    <div class="itemForm">
+                                      <div class="flexbox">
+                                        <div class="grupo-select">
+                                            <select name="mes" id="selectMes">
+                                                <option disabled selected>Mes</option>
+                                                <!-- Completado con JavaScript-->
+                                            </select>
+                                        </div>
+                                        <div class="grupo-select">
+                                            <select name="year" id="selectYear">
+                                                <option disabled selected>Año</option>
+                                                <!-- Completado con JavaScript-->
+                                            </select>
+                                        </div>
+                                        <div id="" class="form-text">Vencimiento</div>
+                                    </div>
+                                    <div class="itemForm">
+                                        <input type="text" class="form-control" placeholder="111" id="codigoTarjeta" maxlength="3">
+                                        <div id="" class="form-text">Código de seguridad</div>                                    
+                                    </div> 
+                                    <div class="itemForm">
+                                        <input type="text" class="form-control" placeholder="Nombre" id="nombreTitular" maxlength="19" autocomplete="off">
+                                        <div id="" class="form-text">Nombre del titular</div>
+                                    </div>
+                                    <div class="itemForm ">
+                                      <input type="text" class="form-control" placeholder="Apellido" id="apellidoTitular" maxlength="19" autocomplete="off">
+                                      <div id="" class="form-text">Apellido del titular</div>
+                                    </div>
+                                    <div class="itemForm ">
+                                      <input type="text" class="form-control" placeholder="11111111" id="dniTitular" maxlength="8">
+                                      <div id="" class="form-text">DNI del titular</div>                                    
+                                    </div> 
+                                    
+                                  </form> <!--Fin formulario tarjeta-->
+                              </div> <!--Fin contenedor-->
+                          </div>  <!-- Fin modal-body-->
+
+                              <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-info" data-dismiss="modal">Completado</button>
+                              </div> <!--Fin modal-footer-->
+                            </div> <!--Fin modal content-->
+                          </div> <!-- Fin modal-dialog-->
+                        </div> <!--Fin modal fade-->
+                        <!------- Fin del modal de la tarjeta ------->
+
+
+
+
+
+        <!-- Dirección de facturación-->
+                    <div class="itemsPago ">
+                        <div class="form-check dirFacturacionEstilo">
+                            <input class="form-check-input " type="checkbox" value="" id="dirFacturacion" checked>
+                            <label class="form-check-label" for="flexCheckChecked">
+                              Mi dirección de facturación y envío son las mismas.
+                            </label>
+                          </div>
+                    </div>
+                    <div id="politica" class="form-text dirFacturacionEstilo">Tus datos personales se utilizarán para procesar tu pedido, mejorar tu experiencia en esta web y otros propósitos descritos en nuestra <a  >política de privacidad</a>.
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="row">
+      <button type="button" class="col-2-g col-5-lg col-5-sm btn btn-outline-info btnEnviarPedido " id="btnConfirmarPedido">
+        Confirmar pedido
+      </button>
+
+      <!-- Botón que aparece si la validación de btnConfirmarPedido es true -->
+      <button type="button" class="col-2-g col-5-lg col-5-sm btn btn-outline-info btnEnviarPedido " data-toggle="modal" data-target=".bd-example-modal-lg" id="btnVerPedido">
+        Ver pedido
+      </button>
+    </div>
+
+<!-- Modal  Resumen del pedido-->
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title articulo" id="exampleModalLongTitle">Resumen del pedido</h5>
+      </div>
+      <div class="modal-body"> 
+
+        <table class="table">
+          <!--
+          <thead >
+            
+            <tr>
+              <th scope="col">Resumen del pedido</th>
+              <th scope="col">Marca</th>
+              <th scope="col">Precio u.</th>
+              <th scope="col">Cantidad</th>
+            </tr>
+          </thead>
+          -->
+          <tbody id="contenedorResumen">
+          </tbody>  
+          <div>
+            <tr class="table-active">
+              <th scope="col" class="articulito">Subtotal: </th>
+              <th scope="col" id="contSubtotal"></th>
+            </tr>
+            <tr class="table-active">
+              <th scope="col" class="articulito">Método de pago: </th>
+              <th scope="col" id="contMetodoPago"></th>
+            </tr>
+            <tr class="table-active">
+              <th scope="col" class="articulito">Tipo de Envío:  </th>
+              <th scope="col" id="contTipoEnvio"></th>
+            </tr>
+            <tr class="table-active">
+              <th scope="col" class="articulito">Costo de envío: </th>
+              <th scope="col" id="contCostoEnvio"></th>
+            </tr>
+            <tr class="table-active">
+              <th scope="col" class="articulito">TOTAL DEL PEDIDO:  </th>
+              <th scope="col" id="contTotalPedido"></th>
+            </tr>
+          </div>
+        </table>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-info" data-dismiss="modal" id="btnPagar">Confirmar compra</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <!-- Fin del modal Resumen del pedido-->
+
+
+
+ 
+
+</div> <!-- Fin de div.container -->
+
+
+
+
+
+
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4">
+                    <ul>
+                        <li><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d820.534979345408!2d-58.641893291525996!3d-34.651169218777305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb8aa7762bd43%3A0x3b271874eb632a7a!2sCastelar!5e0!3m2!1ses!2sar!4v1641934252790!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <ul>
+                      <li>Timbúes 2005, Castelar, Buenos Aires, Argentina</li>
+                      <li>hola@oryzatienda.com.ar</li>
+                      <li>Tel. 11-4444-5555</li>                      
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <ul>
+                      <li><div class="redesFooter" >
+                            <a href="https://www.facebook.com/" target="_blank"> <img src="images/facebook.png" alt="ícono Facebook"> </a>
+                            <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram.png" alt="ícono Instagram"></a>
+                          </div></li>
+                      <li>Suscribirme al newsletter</li>
+                      <li><a href="#header" id="subir">Subir</a></li>
+                    </ul>
+                </div>
+                
+          </div>
+        </div>
+        <div class="container-fluid  copyright">
+          <div class="row justify-content-center text-center">
+            <div class="col-12">
+              <p > &copy; 2022 Todos los Derechos Reservados  &reg; Oryza SRL</p>
+            </div>
+          </div>
+        </div>
+    </footer>
+
+   
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/comprar.js"></script>
+    <script src="js/tarjeta.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+  </html>
